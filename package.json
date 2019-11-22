@@ -4,7 +4,7 @@
   "description": "Functions pipeline like pvc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:@babel/register ./src/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,16 @@
   "bugs": {
     "url": "https://github.com/trustyoo86/pvc-pipe/issues"
   },
-  "homepage": "https://github.com/trustyoo86/pvc-pipe#readme"
+  "homepage": "https://github.com/trustyoo86/pvc-pipe#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.0"
+  }
 }
