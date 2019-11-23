@@ -1,10 +1,10 @@
 {
-  "name": "pvc-pipe",
+  "name": "pipfit",
   "version": "0.0.1",
   "description": "Functions pipeline like pvc",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:@babel/register ./src/*.spec.js"
+    "test": "mocha --require @babel/register ./src/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,8 @@
     "@babel/node": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
     "@babel/register": "^7.7.0",
-    "babel": "^6.23.0"
+    "@pipfit/object": "0.0.2",
+    "babel": "^6.23.0",
+    "eslint": "^6.7.0"
   }
 }
