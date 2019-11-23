@@ -24,6 +24,7 @@
   "homepage": "https://github.com/trustyoo86/pvc-pipe#readme",
   "devDependencies": {
     "chai": "^4.2.0",
+    "lerna": "^3.16.4",
     "mocha": "^6.2.2"
   },
   "dependencies": {
@@ -31,6 +32,7 @@
     "@babel/core": "^7.7.2",
     "@babel/node": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
-    "@babel/register": "^7.7.0"
+    "@babel/register": "^7.7.0",
+    "babel": "^6.23.0"
   }
 }
