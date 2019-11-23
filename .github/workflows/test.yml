@@ -1,0 +1,14 @@
+name: on PR CI
+
+on:
+  pull_request:
+    branches: 
+      - master
+
+jobs:
+  test:
+    name: Test mocha
+    runs-on: [macOS-10.14]
+    steps:
+      - name: Npm test in project
+        run: npm run test
