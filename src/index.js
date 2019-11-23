@@ -1,25 +1,23 @@
 'use strict';
 
-/**
- * Pipe function with same args object
- * @param {Function} prevFn function for pre
- * @param {Function} nextFn function for next
- * @return {Object} assemble objects
- */
-const objPipe = (prevFn, nextFn) => (...args) => Object.assign(prevFn(...args), nextFn(...args));
+const object = require('@pipfit/object');
 
+const pipes = {
+  object: (...fns) => {
+    return object(...fns);
+  },
+};
 
-cosnt pipe
+function pipfit(type = 'object') {
+  const pipeFn = pipes[type];
 
-/**
- * assemble object with function and same parameters
- * @param {...Function} fns function list
- * @return {Object} Objects data after excute function
- */
-const pipeFnsObject = (...fns) => fns.reduce(pipeFn);
+  if (!pipeFn || typeof pipeFn !== 'function') {
+    throw new Error('[pipfit Error]: Type is not valid for pipfit.');
+  }
 
-function pipe(type) {
   return (...fns) => {
-    return 
+    return pipeFn(...fns);
   };
 }
+
+module.exports = pipfit;
