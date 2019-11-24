@@ -10,7 +10,7 @@ jobs:
     name: Test mocha
     runs-on: [macOS-10.14]
     steps:
+      - name: NPM or Yarn install with caching
+        uses: bahmutov/npm-install@v1.1.0
       - name: Npm test in project
-        run: |
-          npm install
-          npm run test
+        run: npm run test
